@@ -79,7 +79,9 @@ def calculate_probability(w1, w2, w3):
     n_w1 = normalize_case(w1)
     n_w2 = normalize_case(w2)
     n_w3 = normalize_case(w3)
-    return (all_trigrams[(n_w1, n_w2, n_w3)] + 1) / (all_trigrams_number + vocabulary_size)
+    trigram = (n_w1, n_w2, n_w3)
+    trigram_count = all_trigrams[trigram] if trigram in all_trigrams else 0
+    return (trigram_count + 1) / (all_trigrams_number + vocabulary_size)
 
 def print_probability(w1, w2, w3):
     print ((w1, w2, w3), ': ', calculate_probability(w1, w2, w3))

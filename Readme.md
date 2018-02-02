@@ -13,8 +13,8 @@ The program generates the following information:
 5. Five test cases (sequence of three words) showing output from your trigram language model.
 
 ## Pre processing
-Replaced few words like &lt;br&gt;, &lt;br /&gt; and &lt;br/&gt; with \n.
-We used regex to tokenize sentence into words. Regex used: [A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+
+Replaced few words like &lt;br&gt;, &lt;br /&gt; and &lt;br/&gt; with \n.<br />
+We used regex to tokenize sentence into words. Regex used: [A-Z]{2,}(?![a-z])|[A-Z][a-z]+(?=[A-Z])|[\'\w\-]+<br />
 Removed stop words.
 
 ## To run
